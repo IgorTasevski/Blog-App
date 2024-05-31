@@ -64,7 +64,7 @@ I have implemented JWT for authentication. The package used is `tymon/jwt-auth`.
 
 ## Testing with Postman
 
-1. Import the `Bridge.postman_collection.json` file into Postman
+1. Import the `Blog.postman_collection.json` file into Postman
 2. Run the requests in the collection
 3. Be sure to firstly register and then login to get the token for the requests that require authentication.
 4. The token is passed in the separate Authentication tab in Postman -> Bearer Token and you paste the token there that you receive when you login.
