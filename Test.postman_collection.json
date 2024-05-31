@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "0198e539-c68f-42af-8841-fd5682e9c581",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26611196",
+		"_collection_link": "https://cloudy-crescent-831574.postman.co/workspace/Team-Workspace~7a33002b-bef0-43cb-80b6-61c8d68da739/collection/26611196-0198e539-c68f-42af-8841-fd5682e9c581?action=share&source=collection_link&creator=26611196"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Login Successful\", function () {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.environment.set(\"token\", jsonData.token);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzE3MTAzMzU1LCJleHAiOjE3MTcxMDY5NTUsIm5iZiI6MTcxNzEwMzM1NSwianRpIjoidlN3QVI0MEdVMklCV3pBcCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SMuiw5dWECLVEFQVApzHSW9iiFYPvltOHaSBvv4cWTc"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE3MTAyOTA2LCJleHAiOjE3MTcxMDY1MDYsIm5iZiI6MTcxNzEwMjkwNiwianRpIjoiaWllSjQzRVFQOXdBSXhQNiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.80kShUXySkjgWE56qE-nAXLGWtIlW9DevUlkpGLbClc",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\",\r\n    \"email\": \"qawe@exqweampqle.com11\",\r\n    \"password\": \"qwertyasdf\",\r\n    \"password_confirmation\": \"qwertyasdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Login Successful\", function () {\r",
+									"  var jsonData = pm.response.json();\r",
+									"  pm.environment.set(\"token\", jsonData.token);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzE3MTAzMzU1LCJleHAiOjE3MTcxMDY5NTUsIm5iZiI6MTcxNzEwMzM1NSwianRpIjoidlN3QVI0MEdVMklCV3pBcCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.SMuiw5dWECLVEFQVApzHSW9iiFYPvltOHaSBvv4cWTc"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzE3MTAyOTA2LCJleHAiOjE3MTcxMDY1MDYsIm5iZiI6MTcxNzEwMjkwNiwianRpIjoiaWllSjQzRVFQOXdBSXhQNiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.80kShUXySkjgWE56qE-nAXLGWtIlW9DevUlkpGLbClc",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"qawe@exqweampqle.com11\",\r\n    \"password\": \"qwertyasdf\",\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "getLoggedInUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/logged-in-user"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "17|tVEas65T1rhjW6AY701oqkUcSFNHl9q9ggLQXgbS87acd72e"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}
